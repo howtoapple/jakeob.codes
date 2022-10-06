@@ -1,12 +1,14 @@
 html, body {
     margin: 0;
+    height: auto;
 }
 
 .navbar {
     display: flex;
-    position: relative;
-    width: auto;
+    position: fixed;
+    width: 100%;
     height: 45px;
+    top: 0;
     padding: 5px;
     background: #35376e;
     border-radius: 0 0 7px 7px;
@@ -70,6 +72,32 @@ html, body {
 .main-contents {
     display: grid;
     padding: 50px;
-    border-radius: 7px;
-    background-color: #f8f8f8;
+    border-radius: 7px 7px 0 0;
+    font-family: inter, serif;
+    background-color: #ecebeb;
+}
+
+.proj-list h3 {
+    margin-top: 55px;
+}
+
+.proj-list p {
+    margin-left: 25px;
+}
+
+.footer {
+    display: flex;
+    position: sticky;    
+    height: auto;
+    bottom: 0;
+    box-shadow: 0 0 1px 0;
+}
+
+.footer-content {
+    display: flex;
+    margin:auto;
+    width: 100%;
+    padding: 0 20px 0 20px;
+    max-width: 650px;
+    font-family: inter, serif;
 }
