@@ -4,64 +4,63 @@
     <meta charset="UTF-8">
     <title> jakeob.codes | Projects </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" id="style-css" href="style.css" type="text/css" media="all">
+    <link rel="icon" href="public/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" id="style-css" href="public/style.css" type="text/css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Zilla+Slab&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Zilla+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/718a716c8b.js" crossorigin="anonymous"></script>
+    <script src="include/templates.js" type="text/javascript" defer></script>
 </head>
 
+<header-comp></header-comp>
+
 <body>
-
-<div class="navbar">
-
-    <div class="navbar-contents">
-        <div class="logo">
-            <a href="index.html">jakeob.codes</a>
-
-        </div>
-
-        <div class="tabs">
-            <a href="about.html"> About Me</a>
-            <a href="projects.html"> Projects</a>
-            <a href=""> Other</a>
-        </div>
-    </div>
-
-</div>
 
 <div class="main">
     <div class="main-contents">
 
         <div>
-            <h1>Projects</h1>
+            <h1>Jakeob's Projects</h1>
             <hr/>
             <h3> Here are some things I've been working on.</h3>
-            <hr/>
         </div>
 
         <div class="proj-list">
 
-            <h3>VirtualPass</h3>
-            <p>VirtualPass is a student hall pass manager, to keep track of students whereabouts and their hall pass usage,
-                created by Syntax[@duedot43]. Intented to be used for classrooms as a modern, open source alternative to existing applications.
-            </p> 
-            <p>
-                My role in the VirtualPass project is front-end design, including UI / UX, navigation, and layout of the pages
-                and to ensure complete responsive design for all devices.
-            </p>
+            <div class="proj-container">
+                <h3>VirtualPass</h3>
+                <p>VirtualPass is a student hall pass manager, to keep track of students whereabouts and their hall pass usage,
+                    created by Syntax[@duedot43]. Intented to be used for classrooms as a modern, open source alternative to existing applications.
+                </p>
+                <p>
+                    My role in the VirtualPass project is front-end design, including UI / UX, navigation, and layout of the pages
+                    and to ensure complete responsive design for all devices.
+                </p>
+                <a href="https://github.com/duedot43/virtualpass">Github Repo <i class="fa-brands fa-github fa-xl"></i></a>
+            </div>
 
-            <h3>Comp-Sci Projects</h3>
-            <p> A bunch of random 'projects' I have done in python for class.</p>
+            <div class="proj-container">
+                <h3>Comp-Sci Projects</h3>
+                <p> A bunch of file 'projects' I have done in python for class, most have not been ported to github and or uncompleted.</p>
+                <a href="https://github.com/howtoapple/compsci-projects">Github Repo <i class="fa-brands fa-github fa-xl"></i></a>
+            </div>
 
-            <h3>Fibeta</h3>
-            <p> A Lightweight chat application for multiple application integration. (More details to come.) </p>
+            <div class="proj-container">
+                <h3>Fibeta</h3>
+                <p> A Lightweight chat application for multiple application integration. (More details to come.) </p>
+                <a> Not yet imported. <i class="fa-brands fa-github fa-xl"></i></a>
+            </div>
 
-            <h3>Jeppsen</h3>
-            <p> To be announced. ( Late 2023 ) </p>
+            <div class="proj-container">
+                <h3>Jeppsen</h3>
+                <p> To be announced. ( Est. Late 2023 ) </p>
+                <a>Unknown Arrival <i class="fa-brands fa-github fa-xl"></i></a>
+            </div>
 
         </div>
 
+        <br/>
         <div>
             <h1>Ideas in the works</h1>
             <hr/>
@@ -82,17 +81,8 @@
     </div>
 
 </div>
-
-<footer>
-    <div class="footer">
-        <p>Email:
-            <a href="mailto: jakeob@jakeob.codes? subject=subject text">
-                jacob@jakeob.codes
-            </a>
-        </p>
-        <p></p>
-    </div>
-</footer>
-
 </body>
+
+<footer-comp></footer-comp>
+
 </html>
