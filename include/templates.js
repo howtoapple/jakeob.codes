@@ -1,14 +1,3 @@
-function copyTag() {
-    const changeText = document.getElementById('copy');
-
-    navigator.clipboard.writeText('Jakeob#6888');
-    changeText.innerHTML = 'Copied!'
-
-    setTimeout(() => {
-        changeText.innerHTML = '<i style="color: #5561f5" class="fa-brands fa-discord fa-lg"></i> Jakeob#6888';
-    }, 2000);
-}
-
 class Header extends HTMLElement {
     constructor() {
         super();
@@ -27,11 +16,15 @@ headerCreate.innerHTML = `
 
             </div>
 
-            <div class="tabs">                
+            <button onclick="mobileDropdown()" class="dropdown-container">
+               <i style="color: white;" class="fa-solid fa-bars fa-2xl"></i>
+            </button>
+            <div id="dropButton" class="tabs dropdown-content">                
                 <a href="./projects.html"> Projects</a>
                 <a> Blog</a>
                 <a href="./about.html"> About Me</a>
             </div>
+
         </div>
 
     </div>
