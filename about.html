@@ -43,7 +43,7 @@
                     <i class="fad fa-brands fa-square-js fa-xl " style="color: #eed94f; background: black; padding-top: 5px; height: 9px;"></i>
                     <i class="fa-brands fa-node-js fa-xl" style="color: #7ab402;"></i>
                     <i class="fa-brands fa-npm fa-xl" style="color: #c13533;"></i>
-                    <i class="fa-brands fa-python fa-xl" style="color: #326a9b;"></i>
+                    <a href="python.org"><i class="fa-brands fa-python fa-xl" style="color: #326a9b;"></i></a>
                     <i class="fa-solid fa-c"><i style="margin: -2px;" class="fa-solid fa-plus fa-xs"></i><i  class="fa-solid fa-plus fa-xs"></i></i>
                     <i class="fa-brands fa-cloudflare fa-xl" style="color: #f48120;"></i>
                     <i class="fa-brands fa-git-alt fa-xl" style="color: #f24c28;"></i>
@@ -63,6 +63,17 @@
 </div>
 </body>
 
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            document.getElementById("navbar").style.background = 'rgba(22,40,80,0.98)';
+        } else {
+            document.getElementById("navbar").style.background = 'none';
+        }
+    }
+</script>
 <script src="include/main.js"></script>
 
 </html>

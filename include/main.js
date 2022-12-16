@@ -17,3 +17,14 @@ function mobileDropdown() {
         menu.style.display = "block";
     }
 }
+
+fetch('https://rory.cat')
+    .then(response => response.text())
+    .then(data => {
+        let parser = new DOMParser();
+        let doc = parser.parseFromString(data, 'text/html');
+        let imgElement = doc.querySelector('img');
+        document.getElementById('roryCat').appendChild(imgElement);
+    })
+    .catch(error => console.error(error));
+

@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     height: auto;
+    overflow-x: hidden;
 }
 
 @media screen and (min-width: 600px) {
@@ -8,12 +9,13 @@ html, body {
     .navbar {
         display: flex;
         position: fixed;
-        width: 100%;
+        width: 99%;
         height: 45px;
         top: 0;
-        padding: 5px;
-        background: rgba(22, 40, 80, 0.93);
-        border-radius: 0 0 7px 7px;
+        margin: 3px;
+        padding: 3px;
+        border-radius: 10px;
+        transition: 0.3s;
     }
 
     .navbar-contents {
@@ -47,6 +49,7 @@ html, body {
         display: none;
     }
     .tabs {
+        display: block;
         margin-left: auto;
         padding: 7px;
         width: fit-content;
@@ -82,7 +85,7 @@ html, body {
         padding: 50px;
         border-radius: 7px 7px 0 0;
         font-family: inter, serif;
-        background-color: #eeeeee;
+        background-color: #f5f5f5;
         box-shadow: 0 0 2px 0;
     }
 
@@ -144,6 +147,174 @@ html, body {
         background: #9cbdd9;
         cursor: pointer;
         text-decoration: underline;
+    }
+
+
+    /* Redesign elements */
+    .main-wrapper {
+        flex: 1;
+        margin:auto;
+        max-width: 1050px;
+        height: 100%;
+    }
+
+    .main-contents {
+        display: grid;
+        width: 100%;
+        border-radius: 7px 7px 0 0;
+        background-color: #f5f5f5;
+        box-shadow: 0 0 2px 0;
+    }
+
+    .welcome-wrapper {
+        position: relative;
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+        box-shadow: 0 0 1px 0;
+        background: rgb(71,5,47);
+        background: linear-gradient(180deg, rgba(71,5,47,1) 50%, rgb(33, 54, 115) 100%);
+    }
+
+    .divider {
+        position: relative;
+        background: #262e34;
+        box-shadow: 0 0 2px 0 white;
+        max-width: 100%;
+        height: 5rem;
+    }
+
+    .divider p {
+        position: absolute;
+        margin: auto;
+        transform: translate(-50%, 50%);
+        top: 25%;
+        left: 50%;
+        color: #c9c9c9;
+        font-family: inter, serif;
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+    .css-bubble{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: #046ab8;
+
+        border-radius: 150px;
+    }
+
+    .type-struct {
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .type-struct h1 {
+        position: relative;
+        color: #818193;
+        font-family: Inter, serif;
+        white-space: nowrap;
+        letter-spacing: .17em;
+        margin: 0 auto;
+        overflow: hidden;
+        border-right: .17em solid pink;
+        animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
+    }
+
+    .type-struct a {
+
+    }
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 100%
+        }
+    }
+
+    @keyframes blinking-cursor {
+        from,
+        to {
+            border-color: transparent
+        }
+        50% {
+            border-color: pink;
+        }
+    }
+
+    .motd {
+        color: #bdbdbd;
+        font-family: Inter,serif;
+        border-radius: 5px;
+        margin: 1em;
+        padding: 10px;
+        background: #28283a;
+    }
+
+    .motd p {
+        margin: 9px;
+    }
+
+    .blog-widget {
+        position: relative;
+        margin: auto;
+
+    }
+
+    .blog-contents {
+        display: flex;
+        margin: 50px auto 50px auto;
+        width: 90%;
+        max-width: 1050px;
+    }
+
+    .blog-featured {
+        display: flex;
+        margin: 0 5px 0 0;
+        background: #ffffff;
+        border-radius: 5px;
+        padding: 15px;
+        width: 70%;
+        height: 180px;
+        box-shadow: 0 0 2px 0;
+    }
+
+    .blog-text {
+        font-family: inter, serif;
+        width: 75%;
+    }
+
+
+    .blog-regular {
+        display: flex;
+        margin: 0 0 0 5px;
+        border-radius: 5px;
+        padding: 15px;
+        width: 30%;
+        height: 180px;
+        box-shadow: 0 0 2px 0;
+    }
+
+    h3 {
+        font-family: Arial, serif;
+    }
+
+    .rory {
+        display: flex;
+        margin: auto;
+        width: 90%;
+        max-width: 1050px;
+    }
+    #rory {
+        padding: 15px;
+        width: 350px;
+        background: #153546;
     }
 }
 

@@ -12,40 +12,105 @@
     <script src="include/templates.js" type="text/javascript" defer></script>
 </head>
 
-
-
-
 <body>
-    <div class="main">
-        <div class="main-contents">
-            <h1> Welcome to Jakeob's Website!</h1>
-            <a> </a>
-            <hr/>
-            <p> These pages are currently undergoing construction</p>
+    <div class="welcome-wrapper">
+        <div class="css-bubble"></div>
+        <div class="type-struct">
+            <h1 class="text"> Welcome to Jakeob's Website!</h1>
+        </div>
+    </div>
+    <div class="divider">
+        <p>Updates: Welcome page Redesign</p>
+    </div>
 
-            <p>Welcome! This site will hold a variety of things I want to put on it. </p>
-            <p></p>
+    <div class="main-wrapper">
+        <div class="main-contents-redesign">
+
+            <div></div>
+            <div class="motd">
+                <p>Welcome, this website will host a variety of things I want to put on it</p>
+                <p>This may not be the final interation of the design - if you have any suggestions please contact me</p>
+            </div>
 
             <div>
-                <h3>Blog: (Coming soon)</h3>
+
             </div>
+            <hr>
+
+            <div class="blog-widget">
+                <h3>Blog: (Coming soon)</h3>
+                <div class="blog-contents">
+
+                    <div class="blog-featured">
+                        <div class="blog-text">
+                            <h3>Example and more</h3>
+                            <p>Lorem Ipsum, who is this fish? more and all that coming soon!</p>
+                        </div>
+
+                        <hr style="opacity: 50%; height: 95%;">
+                        <img src="public/assets/favicon.ico" >
+                    </div>
+
+                    <div class="blog-regular">
+                        <a style="text-decoration: none; color: black" href="https://rory.cat">
+                            <div class="blog-text">
+                                <h3>Rory the cat...</h3>
+                                <p>Rory, rory, rory, rory, rory, rory, Rory, rory, rory, rory, rory, rory,</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
 
             <!-- Look at this fool, bro CANT CODE!!! -->
 
             <div class="wakaStats">
-                <h3>
-                    My Programming Stats:</h3>
-                    <p> Programming stats for the last 30 days, these stats update daily.</p>
-                    <figure><embed style=" float: left; width: 80%;" src="https://wakatime.com/share/@JakeobApple/d471bfa5-fb64-4c18-b8f0-6235685aa496.svg"></figure>
+                <h3>My Programming Stats:</h3>
+                    <p style="font-family: Arial, serif"> Programming stats for the last 30 days, these stats update daily.</p>
+                    <figure><embed style="width: 90%;" src="https://wakatime.com/share/@JakeobApple/d471bfa5-fb64-4c18-b8f0-6235685aa496.svg"></figure>
                     <figure><embed style="width: 80%;" src="https://wakatime.com/share/@JakeobApple/2f27f78c-a52b-4a53-bcab-ca77b5c1c656.svg"></figure>
 
             </div>
+
+            <div class="rory-integration">
+            <h3>Rory Integration</h3>
+                <p style="font-family: inter, Arial, serif;">Rory the Cat</p>
+            <div class="rory">
+                <a href="https://rory.cat">
+                    <img id="rory">
+                    <script>
+                        fetch("https://rory.cat/purr").then((res) =>
+                            res.json())
+                            .then((res) => {
+                                document.getElementById("rory").src = res.url;
+                            });
+                    </script>
+                </a>
+            </div>
+
+        </div>
         </div>
 
     </div>
 
 </body>
+<script>
+    window.onscroll = function() {scrollFunction()};
 
+    function scrollFunction() {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 500) {
+            document.getElementById("navbar").style.background = 'rgba(22,40,80,0.98)';
+        } else {
+            document.getElementById("navbar").style.background = 'none';
+        }
+    }
+</script>
 <script src="include/main.js"></script>
 
 </html>
