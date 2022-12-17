@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <title> jakeob.codes </title>
+    <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="public/assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" id="style-css" href="public/style.css" type="text/css" media="all">
@@ -14,7 +16,7 @@
 
 <body>
     <div class="welcome-wrapper">
-        <div class="css-bubble"></div>
+        <!-- <div class="css-bubble"></div> -->
         <div class="type-struct">
             <h1 class="text"> Welcome to Jakeob's Website!</h1>
         </div>
@@ -54,22 +56,16 @@
                     <div class="blog-regular">
                         <a style="text-decoration: none; color: black" href="https://rory.cat">
                             <div class="blog-text">
-                                <h3>Rory the cat...</h3>
-                                <p>Rory, rory, rory, rory, rory, rory, Rory, rory, rory, rory, rory, rory,</p>
+                                <h3>ejemplo y mas</h3>
+                                <p>Lorem Ipsum, ¿quién es este pez? más y todo eso próximamente!</p>
                             </div>
                         </a>
-
                     </div>
-
-
-
 
                 </div>
             </div>
 
-
             <!-- Look at this fool, bro CANT CODE!!! -->
-
             <div class="wakaStats">
                 <h3>My Programming Stats:</h3>
                     <p style="font-family: Arial, serif"> Programming stats for the last 30 days, these stats update daily.</p>
@@ -78,38 +74,63 @@
 
             </div>
 
-            <div class="rory-integration">
-            <h3>Rory Integration</h3>
+            <div class="rory-widget">
+                <h3>Rory Integration</h3>
                 <p style="font-family: inter, Arial, serif;">Rory the Cat</p>
-            <div class="rory">
-                <a href="https://rory.cat">
-                    <img id="rory">
-                    <script>
-                        fetch("https://rory.cat/purr").then((res) =>
-                            res.json())
-                            .then((res) => {
-                                document.getElementById("rory").src = res.url;
-                            });
-                    </script>
-                </a>
+                <hr>
+
+                <div class="rory-controls">
+                    <div class="rory-credits">
+                        <h4>Credit: Olivia//Chew for all Rory things</h4>
+                        <a href="https://rory.cat">Source: rory.cat</a>
+                        <a href="https://chew.pw">Creator: chew.pw</a>
+                    </div>
+
+                    <div class="ctrl">
+                        <button onclick="document.getElementById('inputID').value = ''; getRory();">Random Rory</button>
+                        <label for="inputID"></label><input type="number" id="inputID"  onchange="getRory()" placeholder="Rory By ID">
+                        <p>Rory ID: </p>
+                        <p id="roryID"></p>
+                    </div>
+
+                </div>
+
+                <div class="rory">
+                    <a href="https://rory.cat">
+                        <img id="rory">
+                        <script>
+                            function getRory() {
+                                const idNumber = document.getElementById("inputID").value;
+                                fetch("https://rory.cat/purr/" + idNumber)
+                                    .then((res) => res.json())
+                                    .then((res) => {
+                                        document.getElementById("rory").src = res.url;
+                                        document.getElementById("roryID").innerHTML = res.id;
+                                    })
+                                    .catch((error) => {
+                                        document.getElementById('rory').innerHTML = "Could not get Rory :(";
+                                    });
+                            }
+                            getRory();
+                        </script>
+                    </a>
+                </div>
             </div>
 
         </div>
-        </div>
-
     </div>
 
 </body>
 <script>
-    window.onscroll = function() {scrollFunction()};
+        window.onscroll = function() {scrollFunction()};
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 500) {
-            document.getElementById("navbar").style.background = 'rgba(22,40,80,0.98)';
-        } else {
-            document.getElementById("navbar").style.background = 'none';
+        function scrollFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 500) {
+                document.getElementById("navbar").style.background = 'rgba(22,40,80,0.98)';
+            } else {
+                document.getElementById("navbar").style.background = 'none';
+            }
         }
-    }
 </script>
 <script src="include/main.js"></script>
 

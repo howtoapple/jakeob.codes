@@ -9,7 +9,7 @@ html, body {
     .navbar {
         display: flex;
         position: fixed;
-        width: 99%;
+        width: 100%;
         height: 45px;
         top: 0;
         margin: 3px;
@@ -70,6 +70,7 @@ html, body {
         background: #4b4d8a;
     }
 
+    /* soon to be ledgacy code*/
     .main {
         flex: 1;
         margin: 50px auto auto;
@@ -88,7 +89,7 @@ html, body {
         background-color: #f5f5f5;
         box-shadow: 0 0 2px 0;
     }
-
+/*  */
     .proj-list p {
         margin-left: 25px;
     }
@@ -120,7 +121,6 @@ html, body {
     }
 
     .footer {
-        display: flex;
         position: sticky;
         height: 200px;
         bottom: 0;
@@ -155,6 +155,7 @@ html, body {
         flex: 1;
         margin:auto;
         max-width: 1050px;
+        padding: 7px;
         height: 100%;
     }
 
@@ -173,7 +174,7 @@ html, body {
         width: 100%;
         box-shadow: 0 0 1px 0;
         background: rgb(71,5,47);
-        background: linear-gradient(180deg, rgba(71,5,47,1) 50%, rgb(33, 54, 115) 100%);
+        background: linear-gradient(180deg, rgb(60, 13, 77) 50%, rgb(38, 60, 126) 100%);
     }
 
     .divider {
@@ -225,10 +226,6 @@ html, body {
         animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
     }
 
-    .type-struct a {
-
-    }
-
     @keyframes typing {
         from {
             width: 0
@@ -252,7 +249,7 @@ html, body {
         color: #bdbdbd;
         font-family: Inter,serif;
         border-radius: 5px;
-        margin: 1em;
+        margin: 1em 0;
         padding: 10px;
         background: #28283a;
     }
@@ -264,13 +261,12 @@ html, body {
     .blog-widget {
         position: relative;
         margin: auto;
-
     }
 
     .blog-contents {
         display: flex;
         margin: 50px auto 50px auto;
-        width: 90%;
+        width: 100%;
         max-width: 1050px;
     }
 
@@ -282,14 +278,13 @@ html, body {
         padding: 15px;
         width: 70%;
         height: 180px;
-        box-shadow: 0 0 2px 0;
+        box-shadow: 0 0 2px 0 rgba(49, 49, 49, 0.81);
     }
 
     .blog-text {
         font-family: inter, serif;
         width: 75%;
     }
-
 
     .blog-regular {
         display: flex;
@@ -305,16 +300,72 @@ html, body {
         font-family: Arial, serif;
     }
 
-    .rory {
-        display: flex;
+    .rory-widget{
+        display: block;
         margin: auto;
-        width: 90%;
-        max-width: 1050px;
+
+    }
+    .rory {
+        margin:auto;
+        right: 5px;
     }
     #rory {
         padding: 15px;
-        width: 350px;
+        width: 80%;
         background: #153546;
+    }
+
+    .ctrl {
+        margin: 11.5rem 0;
+    }
+
+    .rory-controls {
+        display: block;
+        width: 180px;
+        height: 150px;
+        float: left;
+    }
+
+    .rory-controls button {
+        width: 170px;
+        height: 50px;
+        background: #153546;
+        color: #c2c2c2;
+        font-size: 15px;
+        border-radius: 5px;
+        border: none;
+        transition: 0.3s;
+    }
+    .rory-controls button:hover {
+        background: #4b616e;
+        cursor: pointer;
+    }
+    .rory-controls p {
+        font-size: 17px;
+        font-family: Arial, serif;
+        float:left;
+    }
+
+    .rory-controls input {
+        margin: 7px 0 0 0;
+        font-size: 15px;
+        width: 90%;
+        height: 25px;
+    }
+
+    .rory-credits {
+        margin: 0;
+        font-family: Arial, serif;
+        float:left;
+        height: 9rem;
+        background: #153546;
+        padding: 15px;
+        color: white;
+    }
+
+    .rory-credits a{
+        color: #9cbdd9;
+        padding: 5px;
     }
 }
 
@@ -395,14 +446,92 @@ html, body {
         background: #8082d7;
     }
 
-    .main {
+    .welcome-wrapper {
+        position: relative;
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+        box-shadow: 0 0 1px 0;
+        background: rgb(71,5,47);
+        background: linear-gradient(180deg, rgb(60, 13, 77) 50%, rgb(38, 60, 126) 100%);
+    }
+
+    .type-struct {
+        position: absolute;
+        width: fit-content;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .type-struct h1 {
+        position: relative;
+        color: #818193;
+        font-size: 4rem;
+        font-family: Inter, serif;
+        letter-spacing: .17em;
+        margin: 0 auto;
+        overflow: hidden;
+        /*
+        animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
+         */
+    }
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 100%
+        }
+    }
+
+    @keyframes blinking-cursor {
+        from,
+        to {
+            border-color: transparent
+        }
+        50% {
+            border-color: pink;
+        }
+    }
+
+    .divider {
+        position: relative;
+        background: #262e34;
+        box-shadow: 0 0 2px 0 white;
+        max-width: 100%;
+        height: 5rem;
+    }
+
+    .divider p {
+        position: absolute;
+        margin: auto;
+        transform: translate(-50%, 50%);
+        top: 25%;
+        left: 50%;
+        color: #c9c9c9;
+        font-family: inter, serif;
+        font-size: 1.3rem;
+        white-space: nowrap;
+    }
+
+
+    .main-wrapper {
         flex: 1;
         margin-top: 25px;
         height: 100%;
 
     }
 
-    .main-contents {
+    .main-contents-redesign {
+        display: grid;
+        padding: 50px 15px 0 15px;
+        border-radius: 7px 7px 0 0;
+        font-family: inter, serif;
+        background-color: #ffffff;
+        box-shadow: 0 0 2px 0;
+    }    .main-contents {
         display: grid;
         padding: 50px 15px 0 15px;
         border-radius: 7px 7px 0 0;
@@ -410,6 +539,133 @@ html, body {
         background-color: #ffffff;
         box-shadow: 0 0 2px 0;
     }
+
+
+    .motd {
+        color: #bdbdbd;
+        font-family: Inter,serif;
+        border-radius: 5px;
+        margin: 0.1em 0;
+        line-height: 1.7rem;
+        padding: 10px;
+        background: #28283a;
+    }
+
+    .motd p {
+        margin: 9px;
+        font-size: 1.3rem;
+    }
+
+    .blog-widget {
+        position: relative;
+        margin: auto;
+    }
+
+    .blog-contents {
+        width: 100%;
+    }
+
+    .blog-featured {
+        display: flex;
+        margin: 0 5px 5px 0;
+        background: #ffffff;
+        border-radius: 5px;
+        padding: 15px;
+        width: 100%;
+        height: 180px;
+        box-shadow: 0 0 2px 0 rgba(49, 49, 49, 0.81);
+    }
+
+    .blog-text {
+        font-family: inter, serif;
+        width: 75%;
+    }
+
+    .blog-regular {
+        display: flex;
+        border-radius: 5px;
+        padding: 15px;
+        width: 100%;
+        margin: 10px 0 0 0;
+        height: 180px;
+        box-shadow: 0 0 2px 0;
+    }
+
+    h3 {
+        font-family: Arial, serif;
+    }
+
+    .rory-widget{
+        display: block;
+        margin: auto;
+
+    }
+    .rory {
+        margin:auto;
+
+    }
+    #rory {
+        padding: 15px;
+        width: 95%;
+        background: #153546;
+    }
+
+    .ctrl {
+        margin: 11.5rem 0;
+    }
+
+    .rory-controls {
+        display: block;
+        width: 95%;
+        height: 150px;
+        float: left;
+    }
+
+    .rory-controls button {
+        width: 170px;
+        height: 50px;
+        background: #153546;
+        color: #c2c2c2;
+        font-size: 15px;
+        border-radius: 5px;
+        border: none;
+        transition: 0.3s;
+    }
+    .rory-controls button:hover {
+        background: #4b616e;
+        cursor: pointer;
+    }
+    .rory-controls p {
+        font-size: 17px;
+        font-family: Arial, serif;
+        float:left;
+    }
+
+    .rory-controls input {
+        margin: 7px 0 0 0;
+        font-size: 15px;
+        width: 90%;
+        height: 25px;
+    }
+
+    .rory-credits {
+        margin: 0;
+        width: 100%;
+        font-family: Arial, serif;
+        float:left;
+        text-align: center;
+        font-size: 1.2rem;
+        height: 9rem;
+        background: #153546;
+        padding: 15px;
+        color: white;
+    }
+
+    .rory-credits a{
+        color: #9cbdd9;
+        padding: 5px;
+    }
+}
 
     .proj-list p {
         margin-left: 25px;
