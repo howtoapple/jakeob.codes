@@ -433,7 +433,7 @@ html, body {
         width: 100%;
         float: left;
         text-align: center;
-        padding: 15px 0 15px 0px;
+        padding: 15px 0 15px 0;
         color: white;
         text-decoration: none;
         font-family: "Zilla Slab", serif;
@@ -531,7 +531,9 @@ html, body {
         font-family: inter, serif;
         background-color: #ffffff;
         box-shadow: 0 0 2px 0;
-    }    .main-contents {
+    }
+
+    .main-contents {
         display: grid;
         padding: 50px 15px 0 15px;
         border-radius: 7px 7px 0 0;
