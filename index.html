@@ -5,13 +5,21 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home/Welcome Page to jakeob.codes">
+
+    <meta property="og:title" content="Home Page">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jakeob.codes/">
+    <meta property="og:image" content="https://jakeob.codes/public/assets/favicon.ico">
+
     <link rel="icon" href="public/assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" id="style-css" href="public/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/public/style.css" type="text/css" media="all" >
+    <link rel="stylesheet" href="/public/main.css" type="text/css" media="all" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Zilla+Slab&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/718a716c8b.js" crossorigin="anonymous"></script>
-    <script src="include/templates.js" type="text/javascript" defer></script>
+    <script src="/include/templates.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -31,7 +39,7 @@
             <div></div>
             <div class="motd">
                 <p>Welcome, this website will host a variety of things I want to put on it</p>
-                <p>This may not be the final interation of the design - if you have any suggestions please contact me</p>
+                <p>This may not be the final iteration of the design - if you have any suggestions please contact me</p>
             </div>
 
             <div>
@@ -50,7 +58,7 @@
                         </div>
 
                         <hr style="opacity: 50%; height: 95%;">
-                        <img src="public/assets/favicon.ico" >
+                        <img src="public/assets/favicon.ico" alt="Rory">
                     </div>
 
                     <div class="blog-regular">
@@ -97,7 +105,7 @@
 
                 <div class="rory">
                     <a href="https://rory.cat">
-                        <img id="rory">
+                        <img src="" alt="Rory is asleep right now..." id="rory">
                         <script>
                             function getRory() {
                                 const idNumber = document.getElementById("inputID").value;
@@ -121,6 +129,13 @@
     </div>
 
 </body>
+
+<style>
+    .navbar {
+        background: none;
+    }
+</style>
+
 <script>
         window.onscroll = function() {scrollFunction()};
 

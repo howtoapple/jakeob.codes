@@ -12,7 +12,7 @@ headerCreate.innerHTML = `
 
         <div class="navbar-contents">
             <div class="logo">
-                <a href="./index.html">jakeob.codes</a>
+                <a href="../index.html">jakeob.codes</a>
 
             </div>
 
@@ -20,9 +20,9 @@ headerCreate.innerHTML = `
                <i style="color: white;" class="fa-solid fa-bars fa-2xl"></i>
             </button>
             <div id="dropButton" class="tabs dropdown-content">                
-                <a href="./projects.html"> Projects</a>
+                <a href="../views/projects.html"> Projects</a>
                 <a> Blog</a>
-                <a href="./about.html"> About Me</a>
+                <a href="../views/about.html"> About Me</a>
             </div>
 
         </div>
@@ -61,14 +61,12 @@ templateCreate.innerHTML = `
                 <h3> Socials </h3>
                 <div>
                     <a href="https://github.com/howtoapple"><i class="fa-brands fa-github fa-xl"></i> @howtoapple</a>
-                    <a href="https://mastodon.online/explore"><i style="color: #1daadc;" class="fa-brands fa-twitter fa-xl"></i> No longer available</a>
                 </div>
                 <br/>
                 <div>
                     <a href="https://soundcloud.com/jakeobapple"><i style="color:#f65c0e" class="fa-brands fa-soundcloud fa-xl"></i> SoundCloud</a>                
                     <a onclick="copyTag();" id="copy" style="padding: 7px;"><i style="color: #5561f5" class="fa-brands fa-discord fa-lg"></i> Jakeob#6888 </a>
                 </div>            
-                <p>Website created using StalisoVue (unreleased)</p> 
             </div>
 
         </div>

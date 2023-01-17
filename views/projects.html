@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title> jakeob.codes | Projects </title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="public/assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" id="style-css" href="public/style.css" type="text/css" media="all">
+    <meta name="description" content="Project Page to jakeob.codes">
+
+    <meta property="og:title" content="Project Page">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jakeob.codes/projects">
+    <meta property="og:image" content="https://jakeob.codes/public/assets/favicon.ico">
+
+    <link rel="icon" href="../public/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" id="style-css" href="../public/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="main-css" href="../public/main.css" type="text/css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Zilla+Slab&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/718a716c8b.js" crossorigin="anonymous"></script>
-    <script src="include/templates.js" type="text/javascript" defer></script>
+    <script src="../include/templates.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -36,6 +45,15 @@
                     and to ensure complete responsive design for all devices.
                 </p>
                 <a href="https://github.com/duedot43/virtualpass">Github Repo <i class="fa-brands fa-github fa-xl"></i></a>
+            </div>
+
+            <div class="proj-container">
+                <h3>jakeob.codes / blog.jakeob.codes</h3>
+                <p>
+                    The website you are on right now! Jakeob.codes is a webstie with content relating to jakeob.
+                    blog.jakeob.codes will be a website for posting random blog posts (mainly for experimenting).
+                </p>
+                <a href="https://github.com/howtoapple/jakeob.codes/">Github Repo <i class="fa-brands fa-github fa-xl"></i></a>
             </div>
 
             <div class="proj-container">
@@ -75,18 +93,6 @@
 
 </div>
 </body>
-
-<script>
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > -10 || document.documentElement.scrollTop > -10) {
-            document.getElementById("navbar").style.background = 'rgba(22,40,80,0.98)';
-        } else {
-            document.getElementById("navbar").style.background = 'none';
-        }
-    }
-</script>
-<script src="include/main.js"></script>
+<script src="../include/main.js"></script>
 
 </html>
