@@ -12,7 +12,7 @@ headerCreate.innerHTML = `
 
         <div class="navbar-contents">
             <div class="logo">
-                <a href="../index.html">jakeob.codes</a>
+                <a href="https://jakeob.codes/">jakeob.codes</a>
 
             </div>
 
