@@ -1,11 +1,19 @@
 function copyTag() {
-    const changeText = document.getElementById('copy');
+    const tooltip = document.getElementById('tooltiptext');
 
-    navigator.clipboard.writeText('Jakeob#6888');
-    changeText.innerHTML = 'Copied!'
+    //To get rid of the promise not returned error
+    const copyTag = async () => {
+        try{
+            await navigator.clipboard.writeText('Jakeob#6888');
+        } catch (err) {
+            console.error('failed to copy', err);
+        }
+    }
+
+    tooltip.style.visibility = 'visible';
 
     setTimeout(() => {
-        changeText.innerHTML = '<i style="color: #5561f5" class="fa-brands fa-discord fa-lg"></i> Jakeob#6888';
+        tooltip.style.visibility = 'hidden';
     }, 2000);
 }
 

@@ -20,9 +20,9 @@ headerCreate.innerHTML = `
                <i style="color: white;" class="fa-solid fa-bars fa-2xl"></i>
             </button>
             <div id="dropButton" class="tabs dropdown-content">                
-                <a href="../views/projects.html"> Projects</a>
-                <a> Blog</a>
-                <a href="../views/about.html"> About Me</a>
+                <a href="https://jakeob.codes/views/projects"> Projects</a>
+                <a href="https://blog.jakeob.codes/"> Blog</a>
+                <a href="https://jakeob.codes/views/about"> About Me</a>
             </div>
 
         </div>
@@ -56,16 +56,19 @@ templateCreate.innerHTML = `
                 </a>
 
             </div>
-  
+            
             <div style="margin-left: auto;">
                 <h3> Socials </h3>
                 <div>
                     <a href="https://github.com/howtoapple"><i class="fa-brands fa-github fa-xl"></i> @howtoapple</a>
+                    <a onclick="copyTag();" id="copy" class="tooltip" style="padding: 7px;"><i style="color: #5561f5" class="fa-brands fa-discord fa-lg"></i>
+                    <span id="tooltiptext"> Copied </span> 
+                    Jakeob#6888 
+                    </a>
                 </div>
                 <br/>
                 <div>
                     <a href="https://soundcloud.com/jakeobapple"><i style="color:#f65c0e" class="fa-brands fa-soundcloud fa-xl"></i> SoundCloud</a>                
-                    <a onclick="copyTag();" id="copy" style="padding: 7px;"><i style="color: #5561f5" class="fa-brands fa-discord fa-lg"></i> Jakeob#6888 </a>
                 </div>            
             </div>
 
