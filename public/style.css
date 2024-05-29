@@ -3,23 +3,35 @@ html, body {
     height: auto;
 }
 
+/*
+   screen sectors should be phased out.
+   I probably won't get to this...
+ */
 @media screen and (min-width: 600px) {
 
     .navbar {
         display: flex;
         position: fixed;
         width: 100%;
-        height: 45px;
+        height: 3em;
         top: 0;
-        margin: auto;
         padding: 3px;
+        border-radius: 7px;
         transition: 0.3s;
+        backdrop-filter: blur(3px);
+        border: solid white;
+    }
+
+    .navbar-wrapper {
+        display: flex;
+        width: inherit;
         background: rgba(22,40,80,0.98);
+        background: linear-gradient(145deg, rgba(22,40,80,0.98)  0%, rgba(59, 60, 122, 0.98) 100%);
+        border-radius: 7px;
     }
 
     .navbar-contents {
-        display: flex;
-        margin:auto;
+        margin: auto;
         width: 100%;
         padding: 0 20px 0 20px;
         max-width: 1240px;
@@ -38,57 +50,37 @@ html, body {
         font-family: "Zilla Slab", serif;
         font-size: 25px;
     }
-
     .logo:hover {
         text-decoration: underline;
         background: #4b4d8a;
     }
 
-    .dropdown-container {
-        display: none;
-    }
-    .tabs {
-        display: block;
-        margin-left: auto;
-        padding: 7px;
-        width: fit-content;
-    }
-
-    .tabs a {
-        padding: 7px;
-        color: white;
+    .navbar-contents li {
+        display: inline;
+        text-align: right;
+        padding: 0.55em;
         text-decoration: none;
         font-family: "Zilla Slab", serif;
         font-size: 20px;
-        border-radius: 5px;
+        border-radius: 0.45em;
         transition: 0.3s;
-        background: rgba(22,40,80,0.98)
     }
 
-    .tabs a:hover {
+    .navbar-contents a {
+        color: white;
+    }
+
+    .navbar-contents li:hover {
         text-decoration: underline;
         background: #4b4d8a;
     }
-
-    /* soon to be legacy code*/
-    .main {
-        flex: 1;
-        margin-top: 2.5em;
-        height: 100%;
-
+    .dropdown-container {
+        display: none;
     }
 
-    .main-contents {
-        display: grid;
-        margin: 0 auto auto;
-        max-width: 1240px;
-        padding: 3.12em 1em 0 1em;
-        border-radius: 7px 7px 0 0;
-        font-family: inter, serif;
-        background-color: #ffffff;
-        box-shadow: 0 0 2px 0;
-    }
-/*  */
+
+
+
     .proj-list p {
         margin-left: 25px;
     }
@@ -115,13 +107,9 @@ html, body {
         text-decoration: underline;
     }
 
-    .vis-li li {
-        margin: 10px;
-    }
-
     .footer {
         position: sticky;
-        height: 200px;
+        height: 16em;
         bottom: 0;
         box-shadow: 0 0 1px 0;
     }
@@ -135,6 +123,25 @@ html, body {
         font-family: inter, serif;
     }
 
+    .footer-content div {
+        display: flex;
+        margin: auto;
+    }
+
+    .footer-content dt {
+        margin: 1em;
+        padding:;
+        font-family: inter, serif;
+        font-size: 17px;
+        box-shadow: 0 0 1px 0;
+        clip-path: inset(-15px 0);
+    }
+
+    .footer-content dd {
+        margin: 0.8em;
+        font-family: inherit;
+    }
+
     .footer-content a {
         padding: 7px;
         border-radius: 25px;
@@ -143,7 +150,7 @@ html, body {
     }
 
     .footer-content a:hover {
-        background: #9cbdd9;
+        background: rgba(106, 183, 243, 0.35);
         cursor: pointer;
         text-decoration: underline;
     }
@@ -171,14 +178,6 @@ html, body {
         max-width: 1050px;
         padding: 7px;
         height: 100%;
-    }
-
-    .main-contents {
-        display: grid;
-        width: 100%;
-        border-radius: 7px 7px 0 0;
-        background-color: #f5f5f5;
-        box-shadow: 0 0 2px 0;
     }
 
     .welcome-wrapper {

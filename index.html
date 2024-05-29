@@ -20,7 +20,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Zilla+Slab&display=swap" rel="stylesheet">
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script src="https://kit.fontawesome.com/718a716c8b.js" crossorigin="anonymous"></script>
     <script src="./include/templates.js" type="text/javascript" defer></script>
 </head>
@@ -33,7 +32,7 @@
         </div>
     </div>
     <div class="divider">
-        <p>Updates: Welcome page Redesign</p>
+        <p>???</p>
     </div>
 
     <div class="main-wrapper">
@@ -41,8 +40,8 @@
 
             <div></div>
             <div class="motd">
-                <p>Welcome, this website will host a variety of things I want to put on it</p>
-                <p>This may not be the final iteration of the design - if you have any suggestions please contact me</p>
+                <p>Welcome to the Official Charles Robethers Website!!</p>
+                <p>Have suggestions? Contact me! | All information is down below</p>
             </div>
 
             <div>
@@ -85,48 +84,52 @@
 
             </div>
 
-            <div class="rory-widget">
-                <h3>Rory Integration</h3>
-                <p style="font-family: inter, Arial, serif;">Rory the Cat</p>
-                <hr>
+            <article>
+                <div class="rory-widget">
+                    <h3>Rory Integration</h3>
+                    <p style="font-family: inter, Arial, serif;">Rory the Cat</p>
+                    <hr>
 
-                <div class="rory-controls">
-                    <div class="rory-credits">
-                        <h4>Credit: Olivia//Chew for all Rory things</h4>
-                        <a href="https://rory.cat">Source: rory.cat</a>
-                        <a href="https://chew.pw">Creator: chew.pw</a>
+                    <div class="rory-controls">
+                        <div class="rory-credits">
+                            <h4>Credit: Olivia//Chew for all Rory things</h4>
+                            <a href="https://rory.cat">Source: rory.cat</a>
+                            <a href="https://chew.pw">Creator: chew.pw</a>
+                        </div>
+
+                        <div class="ctrl">
+                            <button onclick="document.getElementById('inputID').value = ''; getRory();">Random Rory</button>
+                            <label for="inputID"></label><input type="number" id="inputID"  onchange="getRory()" placeholder="Rory By ID">
+                            <p>Rory ID: </p>
+                            <p id="roryID"></p>
+                        </div>
+
                     </div>
 
-                    <div class="ctrl">
-                        <button onclick="document.getElementById('inputID').value = ''; getRory();">Random Rory</button>
-                        <label for="inputID"></label><input type="number" id="inputID"  onchange="getRory()" placeholder="Rory By ID">
-                        <p>Rory ID: </p>
-                        <p id="roryID"></p>
+                    <div class="rory">
+                        <a href="https://rory.cat">
+                            <img src="" alt="Rory is asleep right now..." id="rory">
+                            <script>
+                                function getRory() {
+                                    const idNumber = document.getElementById("inputID").value;
+                                    fetch("https://rory.cat/purr/" + idNumber)
+                                        .then((res) => res.json())
+                                        .then((res) => {
+                                            document.getElementById("rory").src = res.url;
+                                            document.getElementById("roryID").innerHTML = res.id;
+                                        })
+                                        .catch((error) => {
+                                            document.getElementById('rory').innerHTML = "Could not get Rory :(";
+                                        });
+                                }
+                                getRory();
+                            </script>
+                        </a>
                     </div>
 
-                </div>
 
-                <div class="rory">
-                    <a href="https://rory.cat">
-                        <img src="" alt="Rory is asleep right now..." id="rory">
-                        <script>
-                            function getRory() {
-                                const idNumber = document.getElementById("inputID").value;
-                                fetch("https://rory.cat/purr/" + idNumber)
-                                    .then((res) => res.json())
-                                    .then((res) => {
-                                        document.getElementById("rory").src = res.url;
-                                        document.getElementById("roryID").innerHTML = res.id;
-                                    })
-                                    .catch((error) => {
-                                        document.getElementById('rory').innerHTML = "Could not get Rory :(";
-                                    });
-                            }
-                            getRory();
-                        </script>
-                    </a>
                 </div>
-            </div>
+            </article>
 
         </div>
     </div>

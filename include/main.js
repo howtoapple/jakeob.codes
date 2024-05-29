@@ -4,7 +4,7 @@ function copyTag() {
     //To get rid of the promise not returned error
     const copyTag = async () => {
         try{
-            await navigator.clipboard.writeText('Jakeob#6888');
+            await navigator.clipboard.writeText('jakeobapple');
         } catch (err) {
             console.error('failed to copy', err);
         }
@@ -35,4 +35,3 @@ fetch('https://rory.cat')
         document.getElementById('roryCat').appendChild(imgElement);
     })
     .catch(error => console.error(error));
-
